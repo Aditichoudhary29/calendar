@@ -1,4 +1,4 @@
-import { ImageContainer } from "./leftImage-style";
+import { ImageContainer, ResponsiveImage } from "./leftImage-style";
 
 export const LeftImage = ({ currentDate }) => {
   const monthImages = {
@@ -30,11 +30,7 @@ export const LeftImage = ({ currentDate }) => {
 
   return (
     <ImageContainer>
-      <img
-        src={monthImage}
-        alt={`Image for ${currentMonth}`}
-        style={{ width: "25rem", height: "25rem", borderRadius: "6.25rem" }}
-      />
+      <ResponsiveImage src={monthImage} alt={`Image for ${currentMonth}`} />
     </ImageContainer>
   );
 };

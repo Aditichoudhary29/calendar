@@ -11,6 +11,12 @@ export const RightCalendarContainer = styled("div")({
   height: "43rem",
   marginRight: "5rem",
   width: "100%",
+  "@media (max-width: 480px)": {
+    marginRight: "0",
+    justifyContent: "flex-start",
+    width: "100%",
+    borderRadius: "0",
+  },
 });
 export const BlockContainer = styled("div")({
   display: "grid",
@@ -20,6 +26,11 @@ export const BlockContainer = styled("div")({
   rowGap: "1rem",
   width: "100%",
   gridTemplateColumns: "repeat(7, 0fr)",
+  "@media (max-width: 480px)": {
+    rowGap: "0.5rem",
+    columnGap: "0.5rem",
+    paddingBottom: "2rem",
+  },
 });
 export const DateBlock = styled("div")({
   display: "flex",
@@ -32,6 +43,10 @@ export const DateBlock = styled("div")({
   backgroundColor: "#EBEAFF",
   border: "1px solid #563A9C",
   borderRadius: "1.25rem",
+  "@media (max-width: 480px)": {
+    width: "1.5rem",
+    height: "1.5rem",
+  },
 });
 
 export const HeaderContainer = styled("div")({
@@ -41,4 +56,7 @@ export const HeaderContainer = styled("div")({
   justifyContent: "space-between",
   width: "35rem",
   marginBottom: "1rem",
+  "@media (max-width: 480px)": {
+    width: "100%",
+  },
 });

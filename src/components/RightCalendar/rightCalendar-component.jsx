@@ -90,7 +90,16 @@ export const RightCalendarComponent = ({ currentDate, onMonthChange }) => {
         <IconButton onClick={() => onMonthChange(-1)}>
           <ArrowBackIosIcon />
         </IconButton>
-        <Typography fontSize={"3rem"} fontWeight={900} color="#563A9C">
+        <Typography
+          fontSize={"3rem"}
+          fontWeight={900}
+          color="#563A9C"
+          style={{
+            "@media (max-width: 480px)": {
+              fontSize: "2rem",
+            },
+          }}
+        >
           {monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}
         </Typography>
         <IconButton onClick={() => onMonthChange(1)}>
@@ -99,13 +108,13 @@ export const RightCalendarComponent = ({ currentDate, onMonthChange }) => {
       </HeaderContainer>
 
       <BlockContainer>
-        <Typography>Sunday</Typography>
-        <Typography>Monday</Typography>
-        <Typography>Tuesday</Typography>
-        <Typography>Wednesday</Typography>
-        <Typography>Thursday</Typography>
-        <Typography>Friday</Typography>
-        <Typography>Saturday</Typography>
+        <Typography fontSize={"0.65rem"}>Sunday</Typography>
+        <Typography fontSize={"0.65rem"}>Monday</Typography>
+        <Typography fontSize={"0.65rem"}>Tuesday</Typography>
+        <Typography fontSize={"0.65rem"}>Wednesday</Typography>
+        <Typography fontSize={"0.65rem"}>Thursday</Typography>
+        <Typography fontSize={"0.65rem"}>Friday</Typography>
+        <Typography fontSize={"0.65rem"}>Saturday</Typography>
         {days.map((day, index) =>
           day ? (
             <DateBlock key={index} onClick={() => handleDateClick(day)}>
